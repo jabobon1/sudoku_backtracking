@@ -50,8 +50,6 @@ def backtrack_solve(positions: List[Tuple[int, int]],
             # если цифра подходит для текущей ячейки, меняем ее значение и вызывыем
             # рекурсивно функцию для подстановки чисел в следующую свободную ячейку
             puzzle[pos] = num
-            print(f'position:{pos}, number:{num}')
-            print(puzzle)
             if backtrack_solve(positions[1:], puzzle):
                 return True
             # если в каком-то рекурсивном вызове значение подобрать не удалось - сохраняем 0
